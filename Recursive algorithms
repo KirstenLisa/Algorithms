@@ -1,0 +1,65 @@
+function countSheeps(n) {
+
+  if(n > 0) {
+  console.log(n + ': Another sheep jumps over the fence';
+  countSheeps(n-1);
+  } else {
+  console.log('All sheep jumped over the fence');
+  }
+
+countSheeps(3);
+
+
+
+function powerCalculator(x, y) {
+  if(y < 0) {
+  return console.log('exponent should be >= 0')
+  } else {
+  return x ** y;
+  }
+  
+  powerCalculator(10, 2);
+  
+  
+function reverseString(str) {
+  if (str === "")
+    return "";
+  else
+    return reverseString(str.substr(1)) + str.charAt(0);
+}
+
+function tri(n){
+  if(n <= 1){
+    return n
+  } else {
+    return n + tri(n-1)
+  }
+}
+
+function strSplit(str, char) {
+  if(str === '' || !str.includes(char)){
+    return str;
+  } else if (str.charAt(0) === char){
+    return strSplit(str.substr(1), char) 
+  } else {
+    return str.charAt(0) + strSplit(str.substr(1), char);
+  }
+}
+console.log("string split: ", strSplit("02/20/2020", "/"));
+
+
+FIBONACCI
+
+function fibonacci_series (n) {
+  if (n === 1) {
+    return [1];
+  } 
+  else {
+    let series = fibonacci_series(n - 1);
+    series.push(series[series.length - 1] + series[series.length - 2]); 
+    return series;
+  }
+}; 
+
+  
+  
