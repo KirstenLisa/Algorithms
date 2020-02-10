@@ -18,4 +18,87 @@
 
 9. Constant time O(1)
 
-10. 
+11. 
+function hanoi(disk, from, to, buffer) {
+    if (disk > 1) {
+        hanoi(disk-1, from, buffer, to);
+        ticks++;
+        hanoi(disk-1, buffer, to, from);
+        ticks++;
+    }
+    return;
+}
+
+Exponential time O(2^n)
+
+12. 
+
+function countingSheepsIterative(n) {
+    for (let i = n; i > 0; i--) {
+        console.log(i + ": Another sheep jumps over the fence");
+    }
+    console.log("All sheep jumped over the fence");
+}
+
+function powerCalculatorIterative(base, exp) {
+    let result = 1;
+    if (exp < 0) {
+        console.log("exponent should be >= 0");
+        return;
+    }
+    for (let i = 0; i < exp; i++) {
+        result *= base;
+    }
+    return res;
+}
+
+function reverseString(str) {
+    const revStr = [];
+    for (let i = str.length - 1; i >= 0; i--) {
+        revStr.push(str[i]);
+    }
+    return revStr.join("");
+}
+
+
+function nthTriangular(n) {
+  let number = 0;
+  for (let i = 0; i <= n; i++) {
+    number = number + 1
+  number = number + i;
+  return number 
+  }
+  }
+  
+  function stringSplitter(str) {
+    let newStr = [];
+    for (let i = 0; i < str.length; i++) {
+      if(str[i] == '/') {
+        newStr.push(' ');
+        } 
+        newStr.push(str[i])
+    }
+  }
+  
+  function fibonacciNumber(n) {
+    let previousPreviousNum;
+    let previousNum = 0;
+    let currNum = 1;
+
+    for (let i = 1; i < n; i++) {
+        previousPreviousNum = previousNum;
+        previousNum = currNum;
+        currNum = previousPreviousNum + previousNum;
+    }
+
+    return currNum;
+} 
+
+function factorialIterative(n) {
+    let res = 1;
+    for (let i = n; i > 0; i--) {
+        res *= i;
+    }
+    return res;
+}
+
