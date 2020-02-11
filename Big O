@@ -52,6 +52,8 @@ function powerCalculatorIterative(base, exp) {
     return res;
 }
 
+Linear O(n)
+
 function reverseString(str) {
     const revStr = [];
     for (let i = str.length - 1; i >= 0; i--) {
@@ -59,6 +61,8 @@ function reverseString(str) {
     }
     return revStr.join("");
 }
+
+linear O(n)
 
 
 function nthTriangular(n) {
@@ -70,6 +74,8 @@ function nthTriangular(n) {
   }
   }
   
+  linear O(n)
+  
   function stringSplitter(str) {
     let newStr = [];
     for (let i = 0; i < str.length; i++) {
@@ -79,6 +85,8 @@ function nthTriangular(n) {
         newStr.push(str[i])
     }
   }
+  
+  linear O(n)
   
   function fibonacciNumber(n) {
     let previousPreviousNum;
@@ -94,6 +102,10 @@ function nthTriangular(n) {
     return currNum;
 } 
 
+
+linear O(n)
+
+
 function factorialIterative(n) {
     let res = 1;
     for (let i = n; i > 0; i--) {
@@ -101,4 +113,6 @@ function factorialIterative(n) {
     }
     return res;
 }
+
+linear O(n)
 
