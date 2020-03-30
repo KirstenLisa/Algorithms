@@ -1,4 +1,9 @@
-const Node = require('./Node');
+class _Node {
+    constructor(value, next) {
+        this.value = value;
+        this.next = next; // pointer to next node
+    }
+}
 
 class LinkedList {
     constructor() {
@@ -135,7 +140,6 @@ class LinkedList {
 
 }
 
-module.exports = LinkedList;
 
 function display(ls) {
     let currNode = ls.head;
@@ -317,25 +321,4 @@ function merge(l1, l2) {
     return head.next;
 }
 
-function main() {
-    const SSL = new LinkedList();
-    SSL.insertFirst("Apollo");
-    SSL.insertLast("Boomer");
-    SSL.insertLast("Helo");
-    SSL.insertLast("Husker");
-    SSL.insertLast("Starbuck");
-    SSL.insertLast("Tauhida");
-    SSL.remove("Husker");
-    SSL.insertBefore("Athena", "Boomer");
-    SSL.insertAfter("Hotdog", "Helo");
-    SSL.insertAt(3, "Kat");
-    SSL.remove("Tauhida");
-    display(SSL);
-    console.log(mergeSort(SSL.head));
-    //console.log(display(reverseIterative(SSL.head)));
-    //console.log(display(reverseRecursive(SSL.head)));
 
-}
-
-
-main();
